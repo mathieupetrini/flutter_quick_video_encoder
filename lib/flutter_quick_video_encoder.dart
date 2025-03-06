@@ -90,7 +90,7 @@ class FlutterQuickVideoEncoder {
   ///  - 16 bit, little-endiant
   ///  - when using stereo audio, samples should be interleaved left channel first
   static Future<void> appendAudioFrame(Uint8List rawPcm) async {
-    assert(rawPcm.length == (sampleRate * audioChannels * 2) / fps, "invalid data length");
+    // assert(rawPcm.length == (sampleRate * audioChannels * 2) / fps, "invalid data length");
     return await _invokeMethod('appendAudioFrame', {
       'rawPcm': rawPcm,
     });
